@@ -12,6 +12,9 @@ total_golpes_j1 = total_golpes_j2 = 0
 total_movimientos_j1 = total_movimientos_j2 = 0
 
 def obtener_movimientos_combate(elemento=0)->dict:
+    """
+    Retorna un diccionario con los movimientos de cada jugador.
+    """
     if elemento == 0:
         movimientos_combate = {
             "player1": {
@@ -119,6 +122,7 @@ def obtener_movimientos_combate(elemento=0)->dict:
 
 
 def vizualizacion_preliminar():
+    """Un dibujo como entrada al programa."""
     print('\n**************** Talana Kombat JRPG ****************')
     vista_inicio = f"""
     O/       \\O
@@ -132,6 +136,7 @@ def vizualizacion_preliminar():
 
 
 def contador_golpes(jugador):
+    """Cuenta los golpes"""
     global total_golpes_j1
     global total_golpes_j2
 
@@ -141,6 +146,7 @@ def contador_golpes(jugador):
         total_golpes_j2 += 1
 
 def contador_movimientos(jugador):
+    """Cuenta los movimientos"""
     global total_movimientos_j1
     global total_movimientos_j2
 
@@ -151,6 +157,7 @@ def contador_movimientos(jugador):
 
 
 def obtener_valor_ataque(jugador:str, movimiento:str, golpe:str) -> int:
+    """Determina el valor del ataque del jugador"""
     global total_golpes_movimientos_j1
     global total_golpes_movimientos_j2
 
@@ -213,6 +220,7 @@ def obtener_valor_ataque(jugador:str, movimiento:str, golpe:str) -> int:
 
 
 def ataque_jugador_1(ataques_list, i):
+    """Realiza el calculo del daño inflingido al jugador 2"""
     # Info jugador 1
     # print(ataques_list[0][i])
     print(f'{ataques_list[0][i][2]} ({ataques_list[0][i][0]}) (energia actual: {energia_jugador_1})')
@@ -231,7 +239,9 @@ def ataque_jugador_1(ataques_list, i):
 
     return detener_combate, ganador, energia_ganador
 
+
 def ataque_jugador_2(ataques_list, i):
+    """Realiza el calculo del daño inflingido al jugador 1"""
     # Info jugador 2
     global energia_jugador_1
     
@@ -254,6 +264,7 @@ def ataque_jugador_2(ataques_list, i):
 
 
 def compensar_batalla(ataques_list:list):
+    """Metodo auxiliar para rellenar el arreglo en caso que tenga menos movimientos/golpes que el otro"""
     # Antes de iniciar la batalla agrego movimientos vacios para que se pueda realizar la batalla
     rondas_j1 = len(ataques_list[0])
     rondas_j2 = len(ataques_list[1])
@@ -272,6 +283,7 @@ def compensar_batalla(ataques_list:list):
 
 
 def iniciar_combate(movimientos_combate):
+    """Inicio del combate"""
     vizualizacion_preliminar()
 
     for jugador in movimientos_combate:
