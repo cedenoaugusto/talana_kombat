@@ -7,12 +7,9 @@ NOMBRE_J2 = "Arnaldor"
 golpe_movimiento = ""
 energia_jugador_1 = energia_jugador_2 = 6
 ataques_list = []
-total_golpes_movimientos_j1 = 0
-total_golpes_movimientos_j2 = 0
-total_golpes_j1 = 0
-total_golpes_j2 = 0
-total_movimientos_j1 = 0
-total_movimientos_j2 = 0
+total_golpes_movimientos_j1 = total_golpes_movimientos_j2 = 0
+total_golpes_j1 = total_golpes_j2 = 0
+total_movimientos_j1 = total_movimientos_j2 = 0
 
 def obtener_movimientos_combate(elemento=0)->dict:
     if elemento == 0:
