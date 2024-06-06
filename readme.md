@@ -5,7 +5,7 @@ Talana Kombat JRPG
 el pdf tiene un error. Donde dice: "Tonyn le da un puñetazo al pobre Arnaldor" lo que realmente sucede es un movimiento del personaje de acuerdo a JSON.
 Por lo tanto al ganar Arnaldor le quedan 2 de energía, no 1 como se plantea en el ejemplo.
 
---
+<b>vvv</b>
 Respuesta Preguntas generales:
 1. Supongamos que en un repositorio GIT hiciste un commit y olvidaste un archivo. 
 Explica cómo se soluciona si hiciste push, y cómo si aún no hiciste.
